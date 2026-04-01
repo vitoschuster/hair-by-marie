@@ -1,0 +1,143 @@
+---
+const hours = [
+  { day: 'Ponedjeljak – Petak', time: '08:00 – 20:00', open: true },
+  { day: 'Subota', time: '08:00 – 14:00', open: true },
+  { day: 'Nedjelja', time: 'Zatvoreno', open: false },
+];
+---
+
+<section id="kontakt" class="py-24 bg-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <div class="h-px w-12" style="background-color: var(--color-gold)"></div>
+        <span class="font-sans text-xs font-medium tracking-[0.3em] uppercase" style="color: var(--color-gold)">
+          Pronađite nas
+        </span>
+        <div class="h-px w-12" style="background-color: var(--color-gold)"></div>
+      </div>
+      <h2 class="font-serif text-4xl lg:text-5xl font-semibold section-title" style="color: var(--color-dark)">
+        Kontakt
+      </h2>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-8">
+      <!-- Info cards (2 cols) -->
+      <div class="lg:col-span-2 flex flex-col gap-5">
+        <!-- Address -->
+        <div class="rounded-3xl p-7 flex gap-5" style="background-color: var(--color-beige)">
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0" style="background-color: var(--color-linen)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-brown)">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-serif text-lg font-semibold mb-1" style="color: var(--color-dark)">Adresa</h3>
+            <p class="font-sans text-sm leading-relaxed" style="color: var(--color-brown-light)">
+              Vukomerec 36<br />
+              10000 Zagreb<br />
+              Hrvatska
+            </p>
+            <a
+              href="https://maps.google.com/?q=Vukomerec+36,+10000+Zagreb"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 font-sans text-xs font-medium mt-3 underline underline-offset-2"
+              style="color: var(--color-gold)"
+            >
+              Otvori u Google Maps
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="rounded-3xl p-7" style="background-color: var(--color-beige)">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0" style="background-color: var(--color-linen)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-brown)">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="font-serif text-lg font-semibold" style="color: var(--color-dark)">Radno vrijeme</h3>
+          </div>
+          <div class="flex flex-col gap-3">
+            {hours.map((h) => (
+              <div class="flex items-center justify-between">
+                <span class="font-sans text-sm" style="color: var(--color-text)">{h.day}</span>
+                <span class={`font-sans text-sm font-medium ${h.open ? '' : 'opacity-50'}`}
+                  style={`color: ${h.open ? 'var(--color-brown)' : 'var(--color-text)'}`}>
+                  {h.time}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Instagram -->
+        <div class="rounded-3xl p-7 flex gap-5 items-center" style="background-color: var(--color-beige)">
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0" style="background-color: var(--color-linen)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color: var(--color-brown)">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-serif text-lg font-semibold mb-0.5" style="color: var(--color-dark)">Instagram</h3>
+            <a
+              href="https://www.instagram.com/hair__by__marie__/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-sans text-sm underline underline-offset-2"
+              style="color: var(--color-gold)"
+            >
+              @hair__by__marie__
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map + CTA (3 cols) -->
+      <div class="lg:col-span-3 flex flex-col gap-5">
+        <!-- Map embed -->
+        <div class="rounded-3xl overflow-hidden h-72 lg:flex-1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.5!2d16.054!3d45.792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sVukomerec+36%2C+Zagreb!5e0!3m2!1shr!2shr!4v1700000000000"
+            width="100%"
+            height="100%"
+            style="border: 0; min-height: 300px;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Hair by Marie lokacija"
+          ></iframe>
+        </div>
+
+        <!-- Booking CTA -->
+        <div class="rounded-3xl p-8 text-center" style="background-color: var(--color-brown)">
+          <h3 class="font-serif text-2xl lg:text-3xl font-semibold text-cream mb-3">
+            Rezerviraj termin<span class="sparkle text-xl ml-1" style="color: var(--color-gold-light)">✦</span>
+          </h3>
+          <p class="font-sans text-sm text-cream/80 mb-6 leading-relaxed">
+            Online rezervacija 24/7 putem sredime.hr. Brzo, jednostavno i bez čekanja.
+          </p>
+          <a
+            href="https://www.sredime.hr/zagreb/salon-hair-by-marie"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 font-sans font-medium px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg text-sm"
+            style="background-color: var(--color-gold); color: var(--color-dark)"
+          >
+            Rezerviraj online
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

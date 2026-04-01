@@ -1,0 +1,146 @@
+---
+---
+
+<section class="relative min-h-screen flex items-center overflow-hidden bg-cream">
+  <!-- Background decorative blobs -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full opacity-30"
+      style="background: radial-gradient(circle, #E8D5C4 0%, transparent 70%)"></div>
+    <div class="absolute bottom-0 -left-20 w-[500px] h-[500px] rounded-full opacity-20"
+      style="background: radial-gradient(circle, #D4B896 0%, transparent 70%)"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6 py-32 lg:py-0 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
+    <!-- Left: Text Content -->
+    <div class="flex flex-col items-start">
+      <!-- Pre-title badge -->
+      <div class="flex items-center gap-2 mb-6">
+        <div class="h-px w-8 bg-gold"></div>
+        <span class="font-sans text-xs font-medium tracking-[0.3em] uppercase text-gold">
+          Frizerski salon · Zagreb
+        </span>
+      </div>
+
+      <!-- Main heading -->
+      <h1 class="font-serif text-6xl lg:text-7xl xl:text-8xl font-semibold leading-[1.05] text-dark mb-2">
+        Hair
+        <span class="relative inline-block">
+          by
+        </span>
+        <br />
+        Marie
+        <span class="sparkle text-3xl lg:text-4xl align-top mt-2 ml-1">✦</span>
+      </h1>
+
+      <!-- Italic subtitle -->
+      <p class="font-serif italic text-xl lg:text-2xl text-gold mt-2 mb-6">
+        Beauty &amp; Health
+      </p>
+
+      <p class="font-sans text-base lg:text-lg text-brown-light leading-relaxed max-w-md mb-10"
+        style="color: var(--color-brown-light)">
+        Vaš profesionalni frizerski salon u srcu Zagreba. Koristimo Kevin Murphy
+        proizvode i pratimo najnovije trendove kako bismo istaknuli vašu prirodnu ljepotu.
+      </p>
+
+      <!-- Rating -->
+      <div class="flex items-center gap-3 mb-10">
+        <div class="flex gap-0.5">
+          {Array.from({ length: 5 }).map(() => (
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-gold">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          ))}
+        </div>
+        <span class="font-sans text-sm font-semibold text-dark">10.0</span>
+        <span class="font-sans text-sm text-brown-light" style="color: var(--color-brown-light)">
+          · 13 recenzija
+        </span>
+      </div>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="https://www.sredime.hr/zagreb/salon-hair-by-marie"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-brown text-cream font-sans font-medium px-8 py-4 rounded-full hover:bg-gold transition-all duration-300 text-sm tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+          style="background-color: var(--color-brown)"
+        >
+          Rezerviraj termin
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a
+          href="#usluge"
+          class="inline-flex items-center gap-2 border border-brown text-brown font-sans font-medium px-8 py-4 rounded-full hover:bg-beige transition-all duration-300 text-sm tracking-wide"
+          style="border-color: var(--color-brown); color: var(--color-brown)"
+        >
+          Naše usluge
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Photo composition -->
+    <div class="relative hidden lg:flex justify-end items-center">
+      <!-- Main large arch -->
+      <div class="relative w-[380px] h-[480px]">
+        <div class="arch-frame w-full h-full bg-linen overflow-hidden" style="background-color: var(--color-linen)">
+          <img
+            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80"
+            alt="Hair by Marie salon"
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
+        </div>
+
+        <!-- Floating card: Kevin Murphy -->
+        <div class="absolute -left-16 bottom-16 bg-cream shadow-xl rounded-2xl px-5 py-4 flex items-center gap-3 border border-linen"
+          style="background-color: var(--color-cream); border-color: var(--color-linen)">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+            style="background-color: var(--color-beige)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-gold" style="color: var(--color-gold)">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-serif text-sm font-semibold text-dark" style="color: var(--color-dark)">Kevin Murphy</p>
+            <p class="font-sans text-xs" style="color: var(--color-brown-light)">Premium proizvodi</p>
+          </div>
+        </div>
+
+        <!-- Floating card: Rating -->
+        <div class="absolute -right-12 top-16 bg-brown text-cream rounded-2xl px-5 py-4 shadow-xl"
+          style="background-color: var(--color-brown)">
+          <p class="font-serif text-3xl font-bold text-cream">10</p>
+          <p class="font-sans text-xs text-cream/80 mt-0.5">/ 10 ocjena</p>
+        </div>
+
+        <!-- Decorative sparkles -->
+        <div class="absolute top-4 right-4 text-gold text-2xl sparkle" style="color: var(--color-gold)">✦</div>
+        <div class="absolute -bottom-4 left-1/2 text-gold text-lg sparkle opacity-60" style="color: var(--color-gold)">✦</div>
+      </div>
+
+      <!-- Small side arch -->
+      <div class="absolute top-8 -left-4 w-[140px] h-[180px]">
+        <div class="arch-frame w-full h-full overflow-hidden" style="background-color: var(--color-linen)">
+          <img
+            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80"
+            alt="Hair styling"
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+    <span class="font-sans text-xs tracking-widest uppercase" style="color: var(--color-brown-light)">scroll</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-gold)">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>

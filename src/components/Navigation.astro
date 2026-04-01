@@ -1,0 +1,157 @@
+---
+const links = [
+  { href: '#usluge', label: 'Usluge' },
+  { href: '#galerija', label: 'Galerija' },
+  { href: '#cjenik', label: 'Cjenik' },
+  { href: '#o-nama', label: 'O nama' },
+  { href: '#kontakt', label: 'Kontakt' },
+];
+---
+
+<header id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex flex-col leading-none group">
+      <span class="font-serif text-2xl font-semibold text-dark tracking-wide">
+        Hair by Marie
+      </span>
+      <span class="text-xs tracking-[0.25em] uppercase text-gold font-sans font-medium mt-0.5">
+        Beauty &amp; Health
+      </span>
+    </a>
+
+    <!-- Desktop Links -->
+    <ul class="hidden lg:flex items-center gap-8">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="font-sans text-sm font-medium text-text hover:text-gold transition-colors duration-200 tracking-wide relative group"
+          >
+            {link.label}
+            <span class="absolute -bottom-0.5 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- CTA -->
+    <div class="hidden lg:flex items-center gap-4">
+      <a
+        href="https://www.sredime.hr/zagreb/salon-hair-by-marie"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-brown text-cream font-sans text-sm font-medium px-6 py-2.5 rounded-full hover:bg-gold transition-colors duration-300 tracking-wide"
+      >
+        Rezerviraj termin
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobile-menu-btn"
+      aria-label="Otvori izbornik"
+      aria-expanded="false"
+      class="lg:hidden flex flex-col gap-1.5 p-2"
+    >
+      <span class="menu-line block w-6 h-0.5 bg-dark transition-all duration-300"></span>
+      <span class="menu-line block w-6 h-0.5 bg-dark transition-all duration-300"></span>
+      <span class="menu-line block w-4 h-0.5 bg-dark transition-all duration-300"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div
+  id="mobile-menu"
+  class="mobile-menu fixed inset-y-0 right-0 w-72 bg-cream z-50 shadow-2xl flex flex-col px-8 pt-24 pb-10 gap-6 lg:hidden"
+>
+  <button id="mobile-menu-close" aria-label="Zatvori izbornik" class="absolute top-6 right-6 p-2">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+
+  <span class="font-serif text-xl text-dark">Hair by Marie</span>
+
+  <ul class="flex flex-col gap-4 mt-2">
+    {links.map((link) => (
+      <li>
+        <a
+          href={link.href}
+          class="mobile-nav-link font-sans text-lg text-text hover:text-gold transition-colors"
+        >
+          {link.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <a
+    href="https://www.sredime.hr/zagreb/salon-hair-by-marie"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="mt-4 bg-brown text-cream font-sans text-sm font-medium px-6 py-3 rounded-full text-center hover:bg-gold transition-colors duration-300"
+  >
+    Rezerviraj termin
+  </a>
+
+  <div class="mt-auto flex gap-4">
+    <a
+      href="https://www.instagram.com/hair__by__marie__/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+      class="text-text hover:text-gold transition-colors"
+    >
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<!-- Mobile backdrop -->
+<div id="mobile-backdrop" class="hidden fixed inset-0 bg-dark/40 z-40 lg:hidden"></div>
+
+<script>
+  // Scroll effect
+  const nav = document.getElementById('nav')!;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      nav.classList.add('nav-scrolled');
+    } else {
+      nav.classList.remove('nav-scrolled');
+    }
+  });
+
+  // Mobile menu
+  const btn = document.getElementById('mobile-menu-btn')!;
+  const closeBtn = document.getElementById('mobile-menu-close')!;
+  const menu = document.getElementById('mobile-menu')!;
+  const backdrop = document.getElementById('mobile-backdrop')!;
+
+  function openMenu() {
+    menu.classList.add('open');
+    backdrop.classList.remove('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    menu.classList.remove('open');
+    backdrop.classList.add('hidden');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  backdrop.addEventListener('click', closeMenu);
+
+  // Close on nav link click
+  document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>

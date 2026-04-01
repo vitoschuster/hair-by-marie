@@ -1,0 +1,144 @@
+---
+const stats = [
+  { value: '10.0', label: 'Prosječna ocjena', suffix: '/10' },
+  { value: '13+', label: 'Recenzija', suffix: '' },
+  { value: '100%', label: 'Zadovoljnih klijentica', suffix: '' },
+];
+
+const reviews = [
+  {
+    text: 'Nitko mi nikad nije ovako dobro fenirao kosu! Najveće preporuke :)',
+    author: 'Daniela',
+    rating: 10,
+  },
+  {
+    text: 'Prekrasno fenirano i super atmosfera u salonu :)',
+    author: 'Ema',
+    rating: 10,
+  },
+  {
+    text: 'Sve pohvale!',
+    author: 'Anne Caroline',
+    rating: 10,
+  },
+];
+---
+
+<section id="o-nama" class="py-24" style="background-color: var(--color-beige)">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <!-- Left: Photo composition -->
+      <div class="relative">
+        <!-- Main image -->
+        <div class="relative rounded-3xl overflow-hidden h-[500px] lg:h-[600px]">
+          <img
+            src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80"
+            alt="Hair by Marie salon interijer"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <!-- Overlay gradient -->
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(44,26,14,0.4) 0%, transparent 50%)"></div>
+
+          <!-- Floating stat card -->
+          <div class="absolute bottom-6 left-6 right-6 rounded-2xl p-5 flex items-center gap-4"
+            style="background-color: rgba(253,249,245,0.95); backdrop-filter: blur(10px)">
+            <div class="flex -space-x-2">
+              {Array.from({ length: 3 }).map((_, i) => (
+                <div class="w-9 h-9 rounded-full border-2 border-cream flex items-center justify-center font-sans text-xs font-bold"
+                  style={`background-color: var(--color-${['brown', 'gold', 'brown-light'][i]}); border-color: var(--color-cream); color: var(--color-cream)`}>
+                  {['M', 'A', 'E'][i]}
+                </div>
+              ))}
+            </div>
+            <div>
+              <p class="font-serif text-sm font-semibold" style="color: var(--color-dark)">Naše zadovoljne klientice</p>
+              <div class="flex items-center gap-1 mt-0.5">
+                {Array.from({ length: 5 }).map(() => (
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="color: var(--color-gold)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+                <span class="font-sans text-xs font-semibold ml-1" style="color: var(--color-dark)">10.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kevin Murphy badge -->
+        <div class="absolute -top-5 -right-5 bg-brown text-cream rounded-2xl p-4 shadow-xl hidden lg:block"
+          style="background-color: var(--color-brown)">
+          <p class="font-serif text-sm font-semibold">Kevin Murphy</p>
+          <p class="font-sans text-xs opacity-80 mt-0.5">Premium proizvodi</p>
+        </div>
+
+        <!-- Decorative element -->
+        <div class="absolute -bottom-5 -left-5 w-24 h-24 rounded-2xl hidden lg:block"
+          style="background-color: var(--color-gold); opacity: 0.2"></div>
+      </div>
+
+      <!-- Right: Text content -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="h-px w-12" style="background-color: var(--color-gold)"></div>
+          <span class="font-sans text-xs font-medium tracking-[0.3em] uppercase" style="color: var(--color-gold)">
+            O salonu
+          </span>
+        </div>
+
+        <h2 class="font-serif text-4xl lg:text-5xl font-semibold mb-6" style="color: var(--color-dark)">
+          Dobrodošli u<br />
+          <span style="color: var(--color-brown)">Hair by Marie</span>
+          <span class="sparkle text-2xl ml-1" style="color: var(--color-gold)">✦</span>
+        </h2>
+
+        <p class="font-sans text-base leading-relaxed mb-5" style="color: var(--color-brown-light)">
+          Naš frizerski salon nudi profesionalnu uslugu u ugodnom i modernom okruženju s
+          individualnim pristupom svakom klijentu. Specijalizirani smo za moderne rezove,
+          bojanje, highlights, balayage i njegu kose, kao i svečane frizure.
+        </p>
+
+        <p class="font-sans text-base leading-relaxed mb-10" style="color: var(--color-brown-light)">
+          Radimo s kvalitetnim proizvodima na prirodnoj osnovi — ekskluzivno koristimo
+          <strong class="font-semibold" style="color: var(--color-dark)">Kevin Murphy</strong> liniju koja njeguje vašu kosu
+          dok ostvaruje savršene rezultate.
+        </p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 mb-12">
+          {stats.map((stat) => (
+            <div class="text-center rounded-2xl py-5 px-3" style="background-color: var(--color-linen)">
+              <p class="font-serif text-3xl font-bold" style="color: var(--color-brown)">
+                {stat.value}
+                {stat.suffix && <span class="text-lg">{stat.suffix}</span>}
+              </p>
+              <p class="font-sans text-xs mt-1" style="color: var(--color-brown-light)">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Reviews -->
+        <h3 class="font-serif text-xl font-semibold mb-5" style="color: var(--color-dark)">
+          Što kažu naše klientice
+        </h3>
+        <div class="flex flex-col gap-4">
+          {reviews.map((review) => (
+            <div class="rounded-2xl p-5" style="background-color: var(--color-linen)">
+              <div class="flex gap-0.5 mb-2">
+                {Array.from({ length: 5 }).map(() => (
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="color: var(--color-gold)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <p class="font-sans text-sm italic mb-2 leading-relaxed" style="color: var(--color-text)">
+                "{review.text}"
+              </p>
+              <p class="font-sans text-xs font-semibold" style="color: var(--color-brown)">— {review.author}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
