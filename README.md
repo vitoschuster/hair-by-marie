@@ -45,4 +45,4 @@ The hero/about salon visuals should be local optimized assets, not remote stock 
 Current optimized asset paths:
 
 - `public/salon/salon-hero-v2.jpg`
-- `public/salon/salon-interior-v2.jpg`
+- `public/salon/salon-interior-v3.jpg`
