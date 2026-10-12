@@ -1,116 +1,10 @@
 ---
-const categories = [
-  {
-    id: 'sisanje',
-    label: 'Šišanje',
-    services: [
-      { name: 'Žensko šišanje – kratka kosa', duration: '40 min', price: '15€' },
-      { name: 'Žensko šišanje – srednja kosa', duration: '40 min', price: '17€' },
-      { name: 'Žensko šišanje – duga kosa', duration: '40 min', price: '20€' },
-      { name: 'Žensko šišanje – extra duga kosa', duration: '40 min', price: '25€' },
-      { name: 'Muško šišanje', duration: '30 min', price: '15€' },
-      { name: 'Muško šišanje + pranje', duration: '30 min', price: '18€' },
-      { name: 'Brijanje brade', duration: '30 min', price: '5€' },
-      { name: 'Dječje šišanje', duration: '30 min', price: '10€' },
-    ],
-  },
-  {
-    id: 'feniranje',
-    label: 'Feniranje',
-    services: [
-      { name: 'Pranje + sušenje – kratka kosa', duration: '30 min', price: '7€' },
-      { name: 'Pranje + sušenje – srednja kosa', duration: '30 min', price: '9€' },
-      { name: 'Pranje + sušenje – duga kosa', duration: '30 min', price: '12€' },
-      { name: 'Pranje + sušenje – extra duga', duration: '30 min', price: '15€' },
-      { name: 'Feniranje na ravno – kratka kosa', duration: '30 min', price: '15€' },
-      { name: 'Feniranje na ravno – srednja kosa', duration: '30 min', price: '18€' },
-      { name: 'Feniranje na ravno – duga kosa', duration: '30 min', price: '22€' },
-      { name: 'Feniranje na ravno – extra duga', duration: '30 min', price: '25€' },
-      { name: 'Feniranje na valove – kratka kosa', duration: '40 min', price: '15€' },
-      { name: 'Feniranje na valove – srednja kosa', duration: '40 min', price: '20€' },
-      { name: 'Feniranje na valove – duga kosa', duration: '40 min', price: '25€' },
-      { name: 'Feniranje na valove – extra duga', duration: '40 min', price: '30€' },
-      { name: 'Feniranje na četke – kratka kosa', duration: '30 min', price: '15€' },
-      { name: 'Feniranje na četke – srednja kosa', duration: '30 min', price: '20€' },
-      { name: 'Feniranje na četke – duga kosa', duration: '30 min', price: '25€' },
-      { name: 'Feniranje na četke – extra duga', duration: '30 min', price: '30€' },
-    ],
-  },
-  {
-    id: 'bojanje',
-    label: 'Bojanje',
-    services: [
-      { name: 'Bojanje korijena – sve dužine', duration: '60 min', price: '30€' },
-      { name: 'Punobojno bojanje – kratka kosa', duration: '75 min', price: '40€' },
-      { name: 'Punobojno bojanje – srednja kosa', duration: '75 min', price: '50€' },
-      { name: 'Punobojno bojanje – duga kosa', duration: '75 min', price: '60€' },
-      { name: 'Punobojno bojanje – extra duga', duration: '90 min', price: '70€' },
-      { name: 'Dekoloracija – kratka kosa', duration: '60 min', price: '30€' },
-      { name: 'Dekoloracija – srednja kosa', duration: '60 min', price: '40€' },
-      { name: 'Dekoloracija – duga kosa', duration: '60 min', price: '50€' },
-      { name: 'Dekoloracija – extra duga', duration: '60 min', price: '60€' },
-      { name: 'Pramenovi pola glave – kratka', duration: '120 min', price: '30€' },
-      { name: 'Pramenovi pola glave – srednja', duration: '120 min', price: '40€' },
-      { name: 'Pramenovi pola glave – duga', duration: '120 min', price: '50€' },
-      { name: 'Pramenovi cijela glava – kratka', duration: '120 min', price: '50€' },
-      { name: 'Pramenovi cijela glava – srednja', duration: '120 min', price: '60€' },
-      { name: 'Pramenovi cijela glava – duga', duration: '150 min', price: '70€' },
-      { name: 'Face frame pramenovi', duration: '90 min', price: '20€' },
-      { name: 'Color melt/preljev – kratka', duration: '40 min', price: '20€' },
-      { name: 'Color melt/preljev – srednja', duration: '40 min', price: '30€' },
-      { name: 'Color melt/preljev – duga', duration: '40 min', price: '40€' },
-    ],
-  },
-  {
-    id: 'frizure',
-    label: 'Frizure',
-    services: [
-      { name: 'Pletenica – jedna', duration: '15 min', price: '5€' },
-      { name: 'Konjski rep – srednja kosa', duration: '30 min', price: '40€' },
-      { name: 'Konjski rep – duga kosa', duration: '30 min', price: '50€' },
-      { name: 'Polu konjski rep – sve dužine', duration: '30 min', price: '25€' },
-      { name: 'Hollywood valovi – srednja kosa', duration: '60 min', price: '30€' },
-      { name: 'Hollywood valovi – duga kosa', duration: '60 min', price: '35€' },
-      { name: 'Wet look – sve dužine', duration: '30 min', price: '25€' },
-      { name: 'Svečana punđa – srednja kosa', duration: '60 min', price: '50€' },
-      { name: 'Svečana punđa – duga kosa', duration: '60 min', price: '65€' },
-      { name: 'Svečana punđa – extra duga', duration: '60 min', price: '80€' },
-      { name: 'Uvijač – kratka kosa', duration: '45 min', price: '15€' },
-      { name: 'Uvijač – srednja kosa', duration: '45 min', price: '20€' },
-      { name: 'Uvijač – duga kosa', duration: '45 min', price: '25€' },
-      { name: 'Steampod ravnanje – kratka', duration: '45 min', price: '15€' },
-      { name: 'Steampod ravnanje – srednja', duration: '45 min', price: '18€' },
-      { name: 'Steampod ravnanje – duga', duration: '45 min', price: '22€' },
-    ],
-  },
-  {
-    id: 'ekstenzije',
-    label: 'Ekstenzije',
-    services: [
-      { name: 'Keratin ekstenzije 30 cm – kom', duration: '15 min', price: '4€' },
-      { name: 'Keratin ekstenzije 40 cm – kom', duration: '15 min', price: '5€' },
-      { name: 'Keratin ekstenzije 50 cm – kom', duration: '15 min', price: '6€' },
-      { name: 'Keratin ekstenzije 60 cm – kom', duration: '15 min', price: '7€' },
-      { name: 'Premještanje ekstenzija 30 cm', duration: '15 min', price: '3€' },
-      { name: 'Premještanje ekstenzija 40 cm', duration: '15 min', price: '4€' },
-      { name: 'Premještanje ekstenzija 50 cm', duration: '15 min', price: '5€' },
-      { name: 'Premještanje ekstenzija 60 cm', duration: '15 min', price: '6€' },
-      { name: 'Uklanjanje ekstenzija – kom', duration: '15 min', price: '0.50€' },
-    ],
-  },
-  {
-    id: 'njega',
-    label: 'Njega kose',
-    services: [
-      { name: 'Ampula za njegu kose', duration: '20 min', price: '15€' },
-      { name: 'Maska za kosu', duration: '15 min', price: '5€' },
-      { name: 'Dubinska njega kose', duration: '30 min', price: '30€' },
-      { name: 'Nano čestice tretman', duration: '15 min', price: '7€' },
-      { name: 'Piling tjemena', duration: '15 min', price: '10€' },
-      { name: 'Masaža tjemena', duration: '20 min', price: '7€' },
-    ],
-  },
-];
+import pricing from '../data/pricing.json';
+import priceLists from '../data/price-lists.json';
+
+const categories = pricing.categories;
+const anchorDate = pricing.anchorDateLabel;
+const latestPriceList = priceLists.lists[0];
 ---
 
 <section id="cjenik" class="py-24 bg-cream">
@@ -130,6 +24,22 @@ const categories = [
       <p class="font-sans text-base max-w-lg mx-auto mt-6 leading-relaxed" style="color: var(--color-brown-light)">
         Sve cijene uključuju PDV. Za točnu cijenu ovisno o dužini i gustoći vaše kose, preporučujemo konzultaciju.
       </p>
+      <a href={latestPriceList.url} download class="inline-flex items-center gap-2 font-sans text-sm underline underline-offset-4 mt-5" style="color: var(--color-brown)">
+        Preuzmi cjenik (CSV)
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/>
+        </svg>
+      </a>
+      {priceLists.lists.length > 1 && (
+        <details class="mt-4 font-sans text-xs" style="color: var(--color-brown)">
+          <summary class="cursor-pointer underline underline-offset-4">Arhiva cjenika</summary>
+          <ul class="mt-3 flex flex-col gap-2">
+            {priceLists.lists.slice(1).map((list) => (
+              <li><a href={list.url} download class="underline underline-offset-4 break-all">Cjenik — {list.publishedDateLabel} ({list.filename})</a></li>
+            ))}
+          </ul>
+        </details>
+      )}
     </div>
 
     <!-- Accordions -->
@@ -156,20 +66,26 @@ const categories = [
             id={`accordion-${cat.id}`}
           >
             <div style="background-color: var(--color-cream)">
-              <table class="w-full">
+              <table class="w-full table-fixed">
+                <caption class="sr-only">{cat.label} — aktualne cijene i sidrene cijene na {anchorDate}</caption>
                 <thead>
                   <tr style="background-color: var(--color-beige)">
-                    <th class="font-sans text-xs font-medium uppercase tracking-wider text-left px-6 py-3" style="color: var(--color-brown-light)">Usluga</th>
-                    <th class="font-sans text-xs font-medium uppercase tracking-wider text-center px-4 py-3 hidden sm:table-cell" style="color: var(--color-brown-light)">Trajanje</th>
-                    <th class="font-sans text-xs font-medium uppercase tracking-wider text-right px-6 py-3" style="color: var(--color-brown-light)">Cijena</th>
+                    <th scope="col" class="font-sans text-xs font-medium uppercase tracking-wider text-left px-3 sm:px-6 py-3" style="color: var(--color-brown)">Usluga</th>
+                    <th scope="col" class="w-20 font-sans text-xs font-medium uppercase tracking-wider text-center px-2 py-3 hidden sm:table-cell" style="color: var(--color-brown)">Trajanje</th>
+                    <th scope="col" class="w-18 sm:w-28 font-sans text-[10px] sm:text-xs font-medium uppercase tracking-wide text-right px-2 sm:px-4 py-3" style="color: var(--color-brown)">Aktualna cijena</th>
+                    <th scope="col" class="w-22 sm:w-36 font-sans text-[10px] sm:text-xs font-medium uppercase tracking-wide text-right pl-2 pr-3 sm:pr-6 py-3" style="color: var(--color-brown)">
+                      Sidrena cijena
+                      <span class="block text-[10px] sm:text-xs tracking-normal font-normal whitespace-nowrap mt-1">{anchorDate}</span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {cat.services.map((svc, j) => (
                     <tr class="price-row border-t" style={`border-color: var(--color-linen); background-color: ${j % 2 === 1 ? 'var(--color-beige)' : 'transparent'}`}>
-                      <td class="font-sans text-sm px-6 py-3.5" style="color: var(--color-text)">{svc.name}</td>
-                      <td class="font-sans text-xs text-center px-4 py-3.5 hidden sm:table-cell" style="color: var(--color-brown-light)">{svc.duration}</td>
-                      <td class="font-serif text-sm font-semibold text-right px-6 py-3.5" style="color: var(--color-brown)">{svc.price}</td>
+                      <td class="font-sans text-sm px-3 sm:px-6 py-3.5" style="color: var(--color-text)">{svc.name}</td>
+                      <td class="font-sans text-xs text-center px-2 py-3.5 hidden sm:table-cell" style="color: var(--color-brown-light)">{svc.duration}</td>
+                      <td class="font-serif text-sm font-semibold text-right whitespace-nowrap px-2 sm:px-4 py-3.5" style="color: var(--color-brown)">{svc.price}</td>
+                      <td class="font-serif text-sm text-right whitespace-nowrap pl-2 pr-3 sm:pr-6 py-3.5" style="color: var(--color-brown)">{svc.anchorPrice}</td>
                     </tr>
                   ))}
                 </tbody>

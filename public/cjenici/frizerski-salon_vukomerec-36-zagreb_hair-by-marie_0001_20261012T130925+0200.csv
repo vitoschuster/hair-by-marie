@@ -1,0 +1,75 @@
+kategorija,naziv_usluge,maloprodajna_cijena_eur,poseban_oblik_prodaje,naziv_posebnog_oblika_prodaje,sidrena_cijena_eur,datum_sidrene_cijene,valuta
+Šišanje,Žensko šišanje – kratka kosa,15.00,false,,15.00,2026-09-10,EUR
+Šišanje,Žensko šišanje – srednja kosa,17.00,false,,17.00,2026-09-10,EUR
+Šišanje,Žensko šišanje – duga kosa,20.00,false,,20.00,2026-09-10,EUR
+Šišanje,Žensko šišanje – extra duga kosa,25.00,false,,25.00,2026-09-10,EUR
+Šišanje,Muško šišanje,15.00,false,,15.00,2026-09-10,EUR
+Šišanje,Muško šišanje + pranje,18.00,false,,18.00,2026-09-10,EUR
+Šišanje,Brijanje brade,5.00,false,,5.00,2026-09-10,EUR
+Šišanje,Dječje šišanje,10.00,false,,10.00,2026-09-10,EUR
+Feniranje,Pranje + sušenje – kratka kosa,7.00,false,,7.00,2026-09-10,EUR
+Feniranje,Pranje + sušenje – srednja kosa,9.00,false,,9.00,2026-09-10,EUR
+Feniranje,Pranje + sušenje – duga kosa,12.00,false,,12.00,2026-09-10,EUR
+Feniranje,Pranje + sušenje – extra duga,15.00,false,,15.00,2026-09-10,EUR
+Feniranje,Feniranje na ravno – kratka kosa,15.00,false,,15.00,2026-09-10,EUR
+Feniranje,Feniranje na ravno – srednja kosa,18.00,false,,18.00,2026-09-10,EUR
+Feniranje,Feniranje na ravno – duga kosa,22.00,false,,22.00,2026-09-10,EUR
+Feniranje,Feniranje na ravno – extra duga,25.00,false,,25.00,2026-09-10,EUR
+Feniranje,Feniranje na valove – kratka kosa,15.00,false,,15.00,2026-09-10,EUR
+Feniranje,Feniranje na valove – srednja kosa,20.00,false,,20.00,2026-09-10,EUR
+Feniranje,Feniranje na valove – duga kosa,25.00,false,,25.00,2026-09-10,EUR
+Feniranje,Feniranje na valove – extra duga,30.00,false,,30.00,2026-09-10,EUR
+Feniranje,Feniranje na četke – kratka kosa,15.00,false,,15.00,2026-09-10,EUR
+Feniranje,Feniranje na četke – srednja kosa,20.00,false,,20.00,2026-09-10,EUR
+Feniranje,Feniranje na četke – duga kosa,25.00,false,,25.00,2026-09-10,EUR
+Feniranje,Feniranje na četke – extra duga,30.00,false,,30.00,2026-09-10,EUR
+Bojanje,Bojanje korijena – sve dužine,30.00,false,,30.00,2026-09-10,EUR
+Bojanje,Punobojno bojanje – kratka kosa,40.00,false,,40.00,2026-09-10,EUR
+Bojanje,Punobojno bojanje – srednja kosa,50.00,false,,50.00,2026-09-10,EUR
+Bojanje,Punobojno bojanje – duga kosa,60.00,false,,60.00,2026-09-10,EUR
+Bojanje,Punobojno bojanje – extra duga,70.00,false,,70.00,2026-09-10,EUR
+Bojanje,Dekoloracija – kratka kosa,30.00,false,,30.00,2026-09-10,EUR
+Bojanje,Dekoloracija – srednja kosa,40.00,false,,40.00,2026-09-10,EUR
+Bojanje,Dekoloracija – duga kosa,50.00,false,,50.00,2026-09-10,EUR
+Bojanje,Dekoloracija – extra duga,60.00,false,,60.00,2026-09-10,EUR
+Bojanje,Pramenovi pola glave – kratka,30.00,false,,30.00,2026-09-10,EUR
+Bojanje,Pramenovi pola glave – srednja,40.00,false,,40.00,2026-09-10,EUR
+Bojanje,Pramenovi pola glave – duga,50.00,false,,50.00,2026-09-10,EUR
+Bojanje,Pramenovi cijela glava – kratka,50.00,false,,50.00,2026-09-10,EUR
+Bojanje,Pramenovi cijela glava – srednja,60.00,false,,60.00,2026-09-10,EUR
+Bojanje,Pramenovi cijela glava – duga,70.00,false,,70.00,2026-09-10,EUR
+Bojanje,Face frame pramenovi,20.00,false,,20.00,2026-09-10,EUR
+Bojanje,Color melt/preljev – kratka,20.00,false,,20.00,2026-09-10,EUR
+Bojanje,Color melt/preljev – srednja,30.00,false,,30.00,2026-09-10,EUR
+Bojanje,Color melt/preljev – duga,40.00,false,,40.00,2026-09-10,EUR
+Frizure,Pletenica – jedna,5.00,false,,5.00,2026-09-10,EUR
+Frizure,Konjski rep – srednja kosa,40.00,false,,40.00,2026-09-10,EUR
+Frizure,Konjski rep – duga kosa,50.00,false,,50.00,2026-09-10,EUR
+Frizure,Polu konjski rep – sve dužine,25.00,false,,25.00,2026-09-10,EUR
+Frizure,Hollywood valovi – srednja kosa,30.00,false,,30.00,2026-09-10,EUR
+Frizure,Hollywood valovi – duga kosa,35.00,false,,35.00,2026-09-10,EUR
+Frizure,Wet look – sve dužine,25.00,false,,25.00,2026-09-10,EUR
+Frizure,Svečana punđa – srednja kosa,50.00,false,,50.00,2026-09-10,EUR
+Frizure,Svečana punđa – duga kosa,65.00,false,,65.00,2026-09-10,EUR
+Frizure,Svečana punđa – extra duga,80.00,false,,80.00,2026-09-10,EUR
+Frizure,Uvijač – kratka kosa,15.00,false,,15.00,2026-09-10,EUR
+Frizure,Uvijač – srednja kosa,20.00,false,,20.00,2026-09-10,EUR
+Frizure,Uvijač – duga kosa,25.00,false,,25.00,2026-09-10,EUR
+Frizure,Steampod ravnanje – kratka,15.00,false,,15.00,2026-09-10,EUR
+Frizure,Steampod ravnanje – srednja,18.00,false,,18.00,2026-09-10,EUR
+Frizure,Steampod ravnanje – duga,22.00,false,,22.00,2026-09-10,EUR
+Ekstenzije,Keratin ekstenzije 30 cm – kom,4.00,false,,4.00,2026-09-10,EUR
+Ekstenzije,Keratin ekstenzije 40 cm – kom,5.00,false,,5.00,2026-09-10,EUR
+Ekstenzije,Keratin ekstenzije 50 cm – kom,6.00,false,,6.00,2026-09-10,EUR
+Ekstenzije,Keratin ekstenzije 60 cm – kom,7.00,false,,7.00,2026-09-10,EUR
+Ekstenzije,Premještanje ekstenzija 30 cm,3.00,false,,3.00,2026-09-10,EUR
+Ekstenzije,Premještanje ekstenzija 40 cm,4.00,false,,4.00,2026-09-10,EUR
+Ekstenzije,Premještanje ekstenzija 50 cm,5.00,false,,5.00,2026-09-10,EUR
+Ekstenzije,Premještanje ekstenzija 60 cm,6.00,false,,6.00,2026-09-10,EUR
+Ekstenzije,Uklanjanje ekstenzija – kom,0.50,false,,0.50,2026-09-10,EUR
+Njega kose,Ampula za njegu kose,15.00,false,,15.00,2026-09-10,EUR
+Njega kose,Maska za kosu,5.00,false,,5.00,2026-09-10,EUR
+Njega kose,Dubinska njega kose,30.00,false,,30.00,2026-09-10,EUR
+Njega kose,Nano čestice tretman,7.00,false,,7.00,2026-09-10,EUR
+Njega kose,Piling tjemena,10.00,false,,10.00,2026-09-10,EUR
+Njega kose,Masaža tjemena,7.00,false,,7.00,2026-09-10,EUR

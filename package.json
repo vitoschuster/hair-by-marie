@@ -4,10 +4,11 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/export-prices.mjs --check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch-instagram": "node scripts/fetch-instagram.mjs"
+    "fetch-instagram": "node scripts/fetch-instagram.mjs",
+    "export-prices": "node scripts/export-prices.mjs"
   },
   "dependencies": {
     "astro": "latest",

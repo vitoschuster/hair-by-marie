@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "lists": [
+    {
+      "sequence": 1,
+      "filename": "frizerski-salon_vukomerec-36-zagreb_hair-by-marie_0001_20261012T130925+0200.csv",
+      "url": "/cjenici/frizerski-salon_vukomerec-36-zagreb_hair-by-marie_0001_20261012T130925+0200.csv",
+      "publishedAt": "2026-10-12T11:09:25.412Z",
+      "publishedAtZagreb": "2026-10-12T13:09:25+02:00",
+      "publishedDateLabel": "12. 10. 2026.",
+      "serviceCount": 74,
+      "anchorDate": "2026-09-10",
+      "sha256": "21ae17a61df8729e7d6756a005d7685964484287d55d40dab81141005f6f9519"
+    }
+  ]
+}

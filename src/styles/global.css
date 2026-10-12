@@ -90,12 +90,17 @@
 
 /* Accordion */
 .accordion-content {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   overflow: hidden;
-  transition: max-height 0.35s ease;
+  transition: grid-template-rows 0.35s ease;
+}
+.accordion-content > div {
+  min-height: 0;
+  overflow: hidden;
 }
 .accordion-content.open {
-  max-height: 2000px;
+  grid-template-rows: 1fr;
 }
 .accordion-icon {
   transition: transform 0.3s ease;
