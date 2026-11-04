@@ -8,11 +8,18 @@
     "preview": "astro preview",
     "astro": "astro",
     "fetch-instagram": "node scripts/fetch-instagram.mjs",
-    "export-prices": "node scripts/export-prices.mjs"
+    "export-prices": "node scripts/export-prices.mjs",
+    "lint": "astro check"
   },
   "dependencies": {
-    "astro": "latest",
     "@tailwindcss/vite": "latest",
+    "astro": "latest",
     "tailwindcss": "latest"
-  }
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@types/node": "^26.6.6",
+    "typescript": "^6.0.3"
+  },
+  "packageManager": "pnpm@12.16.1"
 }

@@ -1,0 +1,410 @@
+[
+  {
+    "number": 51,
+    "package": "zod",
+    "severity": "high",
+    "vulnerableRange": "< 4.6.6",
+    "firstPatched": "4.6.6",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/51"
+  },
+  {
+    "number": 50,
+    "package": "astro",
+    "severity": "medium",
+    "vulnerableRange": "< 7.3.2",
+    "firstPatched": "7.3.2",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/50"
+  },
+  {
+    "number": 49,
+    "package": "vite",
+    "severity": "low",
+    "vulnerableRange": ">= 7.0.0, <= 7.3.6",
+    "firstPatched": "7.3.7",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/49"
+  },
+  {
+    "number": 48,
+    "package": "vite",
+    "severity": "medium",
+    "vulnerableRange": ">= 7.0.0, <= 7.3.6",
+    "firstPatched": "7.3.7",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/48"
+  },
+  {
+    "number": 47,
+    "package": "vite",
+    "severity": "medium",
+    "vulnerableRange": ">= 7.0.0, <= 7.3.6",
+    "firstPatched": "7.3.7",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/47"
+  },
+  {
+    "number": 46,
+    "package": "vite",
+    "severity": "high",
+    "vulnerableRange": ">= 7.0.0, <= 7.3.6",
+    "firstPatched": "7.3.7",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/46"
+  },
+  {
+    "number": 45,
+    "package": "vite",
+    "severity": "medium",
+    "vulnerableRange": ">= 7.0.0, <= 7.3.6",
+    "firstPatched": "7.3.7",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/45"
+  },
+  {
+    "number": 44,
+    "package": "devalue",
+    "severity": "high",
+    "vulnerableRange": "<= 5.9.2",
+    "firstPatched": "5.9.3",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/44"
+  },
+  {
+    "number": 43,
+    "package": "sharp",
+    "severity": "high",
+    "vulnerableRange": "< 0.35.5",
+    "firstPatched": "0.35.5",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/43"
+  },
+  {
+    "number": 42,
+    "package": "smol-toml",
+    "severity": "medium",
+    "vulnerableRange": "<= 1.8.0",
+    "firstPatched": "1.9.0",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/42"
+  },
+  {
+    "number": 41,
+    "package": "source-map-js",
+    "severity": "high",
+    "vulnerableRange": ">= 1.0.0, < 1.2.2",
+    "firstPatched": "1.2.2",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/41"
+  },
+  {
+    "number": 40,
+    "package": "devalue",
+    "severity": "high",
+    "vulnerableRange": ">= 5.1.0, <= 5.9.2",
+    "firstPatched": "5.9.3",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/40"
+  },
+  {
+    "number": 39,
+    "package": "devalue",
+    "severity": "medium",
+    "vulnerableRange": "<= 5.9.2",
+    "firstPatched": "5.9.3",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/39"
+  },
+  {
+    "number": 38,
+    "package": "devalue",
+    "severity": "high",
+    "vulnerableRange": "<= 5.9.2",
+    "firstPatched": "5.9.3",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/38"
+  },
+  {
+    "number": 37,
+    "package": "devalue",
+    "severity": "low",
+    "vulnerableRange": ">= 1.0.0, <= 5.9.2",
+    "firstPatched": "5.9.3",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/37"
+  },
+  {
+    "number": 36,
+    "package": "devalue",
+    "severity": "medium",
+    "vulnerableRange": "<= 5.9.2",
+    "firstPatched": "5.9.3",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/36"
+  },
+  {
+    "number": 35,
+    "package": "devalue",
+    "severity": "medium",
+    "vulnerableRange": "< 5.9.1",
+    "firstPatched": "5.9.2",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/35"
+  },
+  {
+    "number": 34,
+    "package": "smol-toml",
+    "severity": "high",
+    "vulnerableRange": "<= 1.7.0",
+    "firstPatched": "1.7.1",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/34"
+  },
+  {
+    "number": 33,
+    "package": "astro",
+    "severity": "critical",
+    "vulnerableRange": "< 7.2.8",
+    "firstPatched": "7.2.8",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/33"
+  },
+  {
+    "number": 32,
+    "package": "astro",
+    "severity": "medium",
+    "vulnerableRange": "<= 7.2.3",
+    "firstPatched": "7.2.4",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/32"
+  },
+  {
+    "number": 31,
+    "package": "sharp",
+    "severity": "high",
+    "vulnerableRange": "< 0.35.4",
+    "firstPatched": "0.35.4",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/31"
+  },
+  {
+    "number": 30,
+    "package": "js-yaml",
+    "severity": "high",
+    "vulnerableRange": ">= 4.0.0, < 4.3.2",
+    "firstPatched": "4.3.2",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/30"
+  },
+  {
+    "number": 29,
+    "package": "svgo",
+    "severity": "high",
+    "vulnerableRange": ">= 4.0.0, < 4.1.0",
+    "firstPatched": "4.1.0",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/29"
+  },
+  {
+    "number": 28,
+    "package": "svgo",
+    "severity": "medium",
+    "vulnerableRange": ">= 4.0.0, < 4.1.0",
+    "firstPatched": "4.1.0",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/28"
+  },
+  {
+    "number": 27,
+    "package": "nanoid",
+    "severity": "high",
+    "vulnerableRange": "< 3.3.12",
+    "firstPatched": "3.3.12",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/27"
+  },
+  {
+    "number": 26,
+    "package": "nanoid",
+    "severity": "high",
+    "vulnerableRange": "< 3.3.18",
+    "firstPatched": "3.3.18",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/26"
+  },
+  {
+    "number": 25,
+    "package": "nanoid",
+    "severity": "high",
+    "vulnerableRange": "< 3.3.16",
+    "firstPatched": "3.3.16",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/25"
+  },
+  {
+    "number": 24,
+    "package": "js-yaml",
+    "severity": "high",
+    "vulnerableRange": ">= 4.0.0, < 4.3.1",
+    "firstPatched": "4.3.1",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/24"
+  },
+  {
+    "number": 23,
+    "package": "postcss",
+    "severity": "medium",
+    "vulnerableRange": "<= 8.5.22",
+    "firstPatched": "8.5.23",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/23"
+  },
+  {
+    "number": 22,
+    "package": "postcss",
+    "severity": "high",
+    "vulnerableRange": "<= 8.5.17",
+    "firstPatched": "8.5.18",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/22"
+  },
+  {
+    "number": 21,
+    "package": "postcss",
+    "severity": "high",
+    "vulnerableRange": "<= 8.5.11",
+    "firstPatched": "8.5.12",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/21"
+  },
+  {
+    "number": 20,
+    "package": "sharp",
+    "severity": "high",
+    "vulnerableRange": "< 0.35.0",
+    "firstPatched": "0.35.0",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/20"
+  },
+  {
+    "number": 19,
+    "package": "svgo",
+    "severity": "high",
+    "vulnerableRange": ">= 4.0.0, < 4.0.2",
+    "firstPatched": "4.0.2",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/19"
+  },
+  {
+    "number": 18,
+    "package": "astro",
+    "severity": "medium",
+    "vulnerableRange": "< 7.0.6",
+    "firstPatched": "7.0.6",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/18"
+  },
+  {
+    "number": 17,
+    "package": "astro",
+    "severity": "low",
+    "vulnerableRange": ">= 3.10.0, < 7.0.4",
+    "firstPatched": "7.0.4",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/17"
+  },
+  {
+    "number": 16,
+    "package": "js-yaml",
+    "severity": "high",
+    "vulnerableRange": ">= 4.0.0, < 4.3.0",
+    "firstPatched": "4.3.0",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/16"
+  },
+  {
+    "number": 15,
+    "package": "astro",
+    "severity": "medium",
+    "vulnerableRange": ">= 2.9.0, <= 7.0.9",
+    "firstPatched": "7.1.0",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/15"
+  },
+  {
+    "number": 14,
+    "package": "js-yaml",
+    "severity": "medium",
+    "vulnerableRange": ">= 4.0.0, <= 4.1.1",
+    "firstPatched": "4.2.0",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/14"
+  },
+  {
+    "number": 13,
+    "package": "astro",
+    "severity": "medium",
+    "vulnerableRange": "< 6.4.6",
+    "firstPatched": "6.4.6",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/13"
+  },
+  {
+    "number": 12,
+    "package": "astro",
+    "severity": "high",
+    "vulnerableRange": "< 6.4.6",
+    "firstPatched": "6.4.6",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/12"
+  },
+  {
+    "number": 11,
+    "package": "astro",
+    "severity": "high",
+    "vulnerableRange": "< 6.3.3",
+    "firstPatched": "6.3.3",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/11"
+  },
+  {
+    "number": 10,
+    "package": "vite",
+    "severity": "medium",
+    "vulnerableRange": ">= 7.0.0, <= 7.3.4",
+    "firstPatched": "7.3.5",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/10"
+  },
+  {
+    "number": 9,
+    "package": "vite",
+    "severity": "medium",
+    "vulnerableRange": ">= 7.0.0, <= 7.3.4",
+    "firstPatched": "7.3.5",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/9"
+  },
+  {
+    "number": 8,
+    "package": "esbuild",
+    "severity": "low",
+    "vulnerableRange": ">= 0.27.3, < 0.28.1",
+    "firstPatched": "0.28.1",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/8"
+  },
+  {
+    "number": 7,
+    "package": "devalue",
+    "severity": "high",
+    "vulnerableRange": ">= 5.6.3, <= 5.8.0",
+    "firstPatched": "5.8.1",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/7"
+  },
+  {
+    "number": 6,
+    "package": "astro",
+    "severity": "low",
+    "vulnerableRange": "< 6.1.10",
+    "firstPatched": "6.1.10",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/6"
+  },
+  {
+    "number": 5,
+    "package": "postcss",
+    "severity": "medium",
+    "vulnerableRange": "< 8.5.10",
+    "firstPatched": "8.5.10",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/5"
+  },
+  {
+    "number": 4,
+    "package": "astro",
+    "severity": "medium",
+    "vulnerableRange": "< 6.1.6",
+    "firstPatched": "6.1.6",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/4"
+  },
+  {
+    "number": 3,
+    "package": "vite",
+    "severity": "medium",
+    "vulnerableRange": ">= 7.0.0, <= 7.3.1",
+    "firstPatched": "7.3.2",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/3"
+  },
+  {
+    "number": 2,
+    "package": "vite",
+    "severity": "high",
+    "vulnerableRange": ">= 7.1.0, <= 7.3.1",
+    "firstPatched": "7.3.2",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/2"
+  },
+  {
+    "number": 1,
+    "package": "vite",
+    "severity": "high",
+    "vulnerableRange": ">= 7.0.0, <= 7.3.1",
+    "firstPatched": "7.3.2",
+    "url": "https://github.com/vitoschuster/hair-by-marie/security/dependabot/1"
+  }
+]
