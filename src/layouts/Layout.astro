@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title = 'Hair by Marie – Frizerski salon Zagreb',
-  description = 'Profesionalni frizerski salon u Zagrebu. Specijalizirani za šišanje, bojanje, balayage, svečane frizure i njegu kose. Koristimo Kevin Murphy proizvode.',
+  description = 'Hair by Marie, Vukomerec 36, Zagreb. Šišanje, bojanje, balayage i njega kose. Pogledaj radove, provjeri cjenik i rezerviraj termin.',
   image = '/salon/salon-hero-v2.jpg',
   noindex = false,
 } = Astro.props;
@@ -71,7 +71,7 @@ const salon = {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;450;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -81,6 +81,7 @@ const salon = {
     <link rel="alternate" type="text/plain" href="/llms.txt" title="Sažetak za AI asistente" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Preskoči na sadržaj</a>
     <slot />
   </body>
 </html>

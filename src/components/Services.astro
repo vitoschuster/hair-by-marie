@@ -1,147 +1,67 @@
 ---
 import pricing from '../data/pricing.json';
 
-const services = [
-  {
-    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/></svg>`,
-    title: 'Šišanje',
-    subtitle: 'Muško, žensko, dječje',
-    description: 'Moderni rezovi prilagođeni vašem licu i stilu. Od klasičnih do najsuvremenijih trendova.',
-    price: 'od 15€',
-    anchorPrice: 'od 15€',
-  },
-  {
-    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><path d="M12 20v-8.5"/><path d="M20 20H4"/></svg>`,
-    title: 'Bojanje',
-    subtitle: 'Balayage & highlights',
-    description: 'Punobojno bojanje, pramenovi, balayage i color melt tehnike za savršen rezultat.',
-    price: 'od 30€',
-    anchorPrice: 'od 30€',
-  },
-  {
-    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22a7 7 0 007-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 007 7z"/></svg>`,
-    title: 'Feniranje',
-    subtitle: 'Ravno, valovi & četke',
-    description: 'Profesionalno feniranje na ravno, valove ili okrugle četke za voluminoznu frizuru.',
-    price: 'od 15€',
-    anchorPrice: 'od 15€',
-  },
-  {
-    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
-    title: 'Ekstenzije',
-    subtitle: 'Keratin nanosi',
-    description: 'Keratin ekstenzije za dužinu i volumen. Dostupne u dužinama od 30 do 60 cm.',
-    price: 'od 4€/kom',
-    anchorPrice: 'od 4€/kom',
-  },
-  {
-    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
-    title: 'Svečane frizure',
-    subtitle: 'Punđe & Hollywood valovi',
-    description: 'Elegatne punđe, Hollywood valovi, pletenice i ponytail frizure za svečane prigode.',
-    price: 'od 25€',
-    anchorPrice: 'od 25€',
-  },
-  {
-    icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>`,
-    title: 'Njega kose',
-    subtitle: 'Tretmani & maske',
-    description: 'Ampule, maske, dubinska njega i piling tjemena za zdravu i sjajnu kosu.',
-    price: 'od 5€',
-    anchorPrice: 'od 5€',
-  },
-];
+const descriptions: Record<string, string> = {
+  sisanje: 'Žensko, muško i dječje šišanje.',
+  bojanje: 'Bojanje korijena, pramenovi i preljev.',
+  feniranje: 'Na ravno, na četke ili na valove.',
+  frizure: 'Pletenice, repovi, valovi i punđe.',
+  ekstenzije: 'Keratin ekstenzije od 30 do 60 cm.',
+  njega: 'Maske, dubinska njega i piling tjemena.',
+};
+const order = ['sisanje', 'bojanje', 'feniranje', 'frizure', 'ekstenzije', 'njega'];
+const services = order.map((id) => {
+  const category = pricing.categories.find((category) => category.id === id)!;
+  // Overview prices refer to the service named above, not cheaper add-ons or removal.
+  const entries = category.services.filter((service) => {
+    if (id === 'sisanje') return service.name.includes('šišanje');
+    if (id === 'feniranje') return service.name.startsWith('Feniranje');
+    if (id === 'ekstenzije') return service.name.startsWith('Keratin ekstenzije');
+    return true;
+  });
+  const minimum = (field: 'price' | 'anchorPrice') =>
+    Math.min(...entries.map((service) => Number.parseFloat(service[field])));
+  const format = (value: number) => new Intl.NumberFormat('hr-HR', { maximumFractionDigits: 2 }).format(value);
+  return {
+    ...category,
+    description: descriptions[id],
+    price: format(minimum('price')),
+    anchorPrice: format(minimum('anchorPrice')),
+    unit: id === 'ekstenzije' ? ' €/kom' : ' €',
+  };
+});
 ---
 
-<section id="usluge" class="py-24 bg-cream">
-  <div class="max-w-7xl mx-auto px-6">
-    <!-- Header -->
-    <div class="text-center mb-16">
-      <div class="flex items-center justify-center gap-3 mb-4">
-        <div class="h-px w-12 bg-gold" style="background-color: var(--color-gold)"></div>
-        <span class="font-sans text-xs font-medium tracking-[0.3em] uppercase text-gold" style="color: var(--color-gold)">
-          Što nudimo
-        </span>
-        <div class="h-px w-12 bg-gold" style="background-color: var(--color-gold)"></div>
-      </div>
-      <h2 class="font-serif text-4xl lg:text-5xl font-semibold text-dark section-title" style="color: var(--color-dark)">
-        Naše usluge
-      </h2>
-      <p class="font-sans text-base max-w-xl mx-auto mt-6 leading-relaxed" style="color: var(--color-brown-light)">
-        Pružamo sveobuhvatne usluge njege i stiliziranja kose koristeći premium Kevin Murphy proizvode.
-      </p>
+<section id="usluge" class="section-shell services-section" aria-labelledby="services-heading">
+  <div class="section-heading-row">
+    <div>
+      <p class="section-kicker">Usluge</p>
+      <h2 id="services-heading" class="section-heading">Od šišanja<br />do nove boje.</h2>
     </div>
-
-    <!-- Service grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {services.map((service) => (
-        <div class="group bg-beige rounded-3xl p-8 hover:bg-linen transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default"
-          style="background-color: var(--color-beige)">
-          <!-- Icon -->
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300"
-            style="background-color: var(--color-linen); color: var(--color-brown)">
-            <Fragment set:html={service.icon} />
-          </div>
-
-          <!-- Content -->
-          <h3 class="font-serif text-xl font-semibold mb-1" style="color: var(--color-dark)">
-            {service.title}
-          </h3>
-          <p class="font-sans text-xs font-medium tracking-wider uppercase mb-3" style="color: var(--color-gold)">
-            {service.subtitle}
-          </p>
-          <p class="font-sans text-sm leading-relaxed mb-5" style="color: var(--color-brown-light)">
-            {service.description}
-          </p>
-
-          <!-- Price + link -->
-          <div class="flex flex-wrap items-end justify-between gap-3">
-            <dl class="flex gap-5" style="color: var(--color-brown)">
-              <div>
-                <dt class="font-sans text-[10px] uppercase tracking-wide mb-1">Aktualna cijena</dt>
-                <dd class="font-serif text-lg font-semibold">{service.price}</dd>
-              </div>
-              <div>
-                <dt class="font-sans text-[10px] uppercase tracking-wide mb-1">Sidrena cijena</dt>
-                <dd class="font-serif text-lg">
-                  {service.anchorPrice}
-                  <span class="block font-sans text-[10px] mt-1">{pricing.anchorDateLabel}</span>
-                </dd>
-              </div>
-            </dl>
-            <a href="#cjenik" class="font-sans text-xs font-medium underline underline-offset-2 opacity-0 group-hover:opacity-100 transition-opacity"
-              style="color: var(--color-gold)">
-              Vidi cjenik →
-            </a>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <!-- Bottom CTA -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-14">
-      <a
-        href="https://www.sredime.hr/zagreb/salon-hair-by-marie"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 font-sans text-sm font-medium px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-        style="background-color: var(--color-brown); color: var(--color-cream)"
-      >
-        Rezerviraj termin online
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </a>
-      <a
-        href="tel:+385919307334"
-        class="inline-flex items-center gap-2 font-sans text-sm font-medium px-8 py-4 rounded-full border transition-all duration-300 hover:-translate-y-0.5"
-        style="border-color: var(--color-brown); color: var(--color-brown)"
-      >
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.22 2 2 0 012.22 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-        </svg>
-        Nazovi nas
-      </a>
-    </div>
+    <p class="section-intro">Od redovitog šišanja do bojanja i svečanih frizura. Izaberi što ti treba, a detalje i sve cijene pogledaj u cjeniku.</p>
   </div>
+
+  <div class="service-list">
+    {services.map((service, index) => (
+      <article class="service-row">
+        <span class="service-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+        <div class="service-description">
+          <h3>{service.label}</h3>
+          <p>{service.description}</p>
+        </div>
+        <dl class="service-prices">
+          <div>
+            <dt>Aktualna cijena</dt>
+            <dd>od {service.price}{service.unit}</dd>
+          </div>
+          <div>
+            <dt>Sidrena cijena · {pricing.anchorDateLabel}</dt>
+            <dd>od {service.anchorPrice}{service.unit}</dd>
+          </div>
+        </dl>
+        <a class="service-link" href={`#cjenik-${service.id}`} aria-label={`${service.label} — pogledaj cjenik`}><span aria-hidden="true">↗</span></a>
+      </article>
+    ))}
+  </div>
+  <a href="#cjenik" class="text-link">Sve usluge i cijene <span aria-hidden="true">↗</span></a>
 </section>
