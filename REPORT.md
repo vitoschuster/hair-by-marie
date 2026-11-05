@@ -1,13 +1,13 @@
-# Dependency security report
+# Website refresh report
 
-Branch: `overnight/deps` — ready for draft PR review; no deployment or merge.
+Branch: `overnight/redesign`, based on `overnight/deps`. No deployment or merge.
 
-- Updated Astro 6.1.2 → 7.4.5 and Tailwind 4.2.2 → 4.3.4 with pnpm and the existing lockfile. All 51 open alert entries (1 critical, 25 high) are covered by patched versions or removed packages; `pnpm audit` reports zero vulnerabilities.
-- Fixed Astro 7 gallery compilation; added `pnpm lint` (Astro check), Node types and compatible TypeScript 6. Removed an unused script import.
-- Passed: `pnpm install --frozen-lockfile`, `pnpm lint` (zero diagnostics), `pnpm build` (including 74-service price CSV check), `pnpm audit`, and `git diff --check`. No existing test suite.
-- Ran the site and compared homepage, pricing and 404 at 1280 px and 390 px. Before/after PNGs are in `docs/deps-screenshots/`. Mobile menu and pricing accordion work; no horizontal overflow. Minor compiler whitespace change in hero heading; layout/content preserved.
+- Rebuilt the page with an editorial layout, warm paper/ink/burgundy palette, new typography, real work photography, a staggered gallery and a simpler service list.
+- Rewrote Croatian copy around actual services and booking. Removed generic beauty promises, unverified reviews, ratings and satisfaction claims.
+- Preserved all 74 services, current/anchor prices, CSV downloads/archive, contact details, booking links and structured data. Added native accessible menu/price accordions, category deep links, skip navigation and reduced-motion support.
+- Passed `pnpm lint` (zero diagnostics), `pnpm build` (including price CSV check) and `git diff --check`. Ran and reviewed the production build; menu focus/Escape, category links, CSV and 404 checks pass. No horizontal overflow at 320–1440 px.
+- Desktop/phone screenshots: `docs/redesign-screenshots/`. Earlier appearance: `docs/deps-screenshots/`. Design decisions and assumptions: `NOTES.md`.
 
-Run: `pnpm install --frozen-lockfile && pnpm dev`; verify with `pnpm lint && pnpm build && pnpm audit`.
+Run: `pnpm install --frozen-lockfile && pnpm dev`. Verify: `pnpm lint && pnpm build`.
 
-Assumptions/details: `NOTES.md`. Alert inventory and audit evidence: `docs/`.
-Left: review/merge the draft PR when ready; GitHub closes alerts after default-branch re-scan. No decisions required overnight.
+Left: review the draft design PR. It targets `overnight/deps` so the redesign is separate from the security PR; retarget after that PR merges. No overnight decisions needed.
